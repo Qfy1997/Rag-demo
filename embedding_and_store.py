@@ -7,12 +7,12 @@ import warnings
 warnings.filterwarnings("ignore")
 
 if __name__=='__main__':
-    query="我在广场跑步的时候把棉袄挂在栏杆上了，结果棉袄被别人拿走了，请问拿走我棉袄的那个人犯法吗？"
-    model = SentenceTransformer('simcse_law_bert_base_chinese')
+    query="hello ..."
+    model = SentenceTransformer('sentence_bert_model')
     sentences = []
     prompt = []
-    prompt_content="法律知识提示:"
-    with open("./law.txt",'r') as f:
+    prompt_content="some prompt:"
+    with open("./prompts.txt",'r') as f:
         lines = f.readlines()
         for line in lines:
             sentences.append(line)
